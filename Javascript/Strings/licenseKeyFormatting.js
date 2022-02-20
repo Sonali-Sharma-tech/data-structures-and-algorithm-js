@@ -17,12 +17,18 @@
         let str = '';
         let res_str = '';
         let count = 0;
+        
+        // remove hypens from string
         for(let i = 0; i < s.length; i++) {
             if(isAlphanumeric(s.charAt(i))) {
                 str = str + s.charAt(i);
             }
         }
+        
+        // convert string to uppercase
         str = str.toUpperCase();
+        
+        // place hypen after k characters starting from end
         for(let i= str.length -1; i >= 0; i--) {
             count ++;
             if(count === k && i !== 0) {
