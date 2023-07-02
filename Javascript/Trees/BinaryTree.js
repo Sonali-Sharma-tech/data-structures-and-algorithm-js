@@ -57,7 +57,7 @@ class Node {
                 } else if(current.right === null) {
                     current.right = newNode;
                     return current;
-                } else if(current.left!== null) {
+                } else {
                     queue.push(current.left);
                     queue.push(current.right);
                 }
@@ -136,7 +136,7 @@ class Node {
         stack.push(current);
         current = current.left;
       }
-      if(current.right === null) {
+      // if(current.right === null) {
         console.log(current.val);
         if(prev !== null && prev !== root) {
           console.log(prev.val);
@@ -147,7 +147,7 @@ class Node {
         if(prev === root) {
           prev = null;
         }
-      }
+      // }
     
      
     }
